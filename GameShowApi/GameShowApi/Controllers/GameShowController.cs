@@ -3,8 +3,6 @@ using System.ComponentModel.DataAnnotations;
 using GameShowApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace GameShowApi.Controllers
 {
     [Route("api/[controller]")]
@@ -12,7 +10,6 @@ namespace GameShowApi.Controllers
     public class GameShowController : ControllerBase
     {
 
-        // GET api/<GameShowController>/5
         [HttpGet("{numberOfSimulations}")]
         public ActionResult<int> Get(int numberOfSimulations, [FromQuery(Name = "switchDoor")] bool switchDoor)
         { 
